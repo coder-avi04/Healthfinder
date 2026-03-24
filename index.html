@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HealthFinder</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <h2>HealthFinder</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#review">Reviews</a>
+    <button onclick="openLogin()">Login</button>
+  </nav>
+</header>
+
+<!-- 🔥 LANDING PAGE -->
+<section class="landing">
+  <div class="overlay">
+    <h1>Find the Right Doctor Instantly</h1>
+    <p>Smart search • Verified doctors • Best discounts</p>
+    <button onclick="scrollToDoctors()">Get Started</button>
+  </div>
+</section>
+
+<!-- Search Section -->
+<section class="hero">
+  <h2>Search Doctors</h2>
+  <input type="text" placeholder="Enter symptoms">
+  <button onclick="searchDoctors()">Search</button>
+</section>
+
+<!-- Doctors -->
+<section id="doctors" class="doctors">
+  <h2>Top Doctors in Bhilai</h2>
+  <div id="doctorList"></div>
+</section>
+
+<!-- Review -->
+<section id="review" class="review">
+  <h2>User Reviews</h2><br>
+  <form onsubmit="submitReview(event)">
+    <input type="text" placeholder="Your Name" required><br>
+    <textarea placeholder="Your Review" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="reviews"></div>
+</section>
+
+<footer>
+  <p>© 2026 HealthFinder</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
